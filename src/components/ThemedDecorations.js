@@ -1,14 +1,16 @@
+import React from 'react';
+
 export default class ThemedDecorations extends React.Component {
   render() {
-    const currentPlayingTitle = 'Mad Max: Fury Road';
+    const className = 'heaven';
     const childrenWithExtraProp = React.Children.map(this.props.children, child => {
       return React.cloneElement(child, {
-        isPlaying: child.props.title === currentPlayingTitle
+        theme: child.props.theme === className
       });
     });
 
     return (
-      <div className="movie-browser">
+      <div>
         {childrenWithExtraProp}
       </div>
     );
