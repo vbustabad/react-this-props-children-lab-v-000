@@ -6,11 +6,11 @@ export default class ThemedDecorations extends React.Component {
         isPlaying: child.props.title === currentPlayingTitle
       });
     });
- 
+
     return (
       <div className="movie-browser">
         {childrenWithExtraProp}
-      </div>      
+      </div>
     );
   }
 }
